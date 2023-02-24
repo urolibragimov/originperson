@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="input-group my-3 d-flex gap-5">
+        <input
+          id="search"
+          type="text"
+          class="form-control"
+          placeholder="Search ......"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+        />
+        <div>
+          <button
+            class="btn btn-danger px-5"
+            type="button"
+            id="button-addon2"
+            data-bs-toggle="modal"
+            data-bs-target="#pupilModal"
+          >
+            Add+
+          </button>
+        </div>
+      </div>
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Ism</th>
+            <th scope="col">Familiya</th>
+            <th scope="col">Manzil</th>
+            <th scope="col">Tug'ilgan oy</th>
+            <th scope="col">Lavozimi</th>
+            <th scope="col">Ishlaydimi</th>
+            <th scope="col" class="text-end">Faoliyat</th>
+          </tr>
+        </thead>
+        <tbody id="pupilTable"></tbody>
+      </table>
+    </div>
+    <form class="row g-3 needs-validation" id="pupilForm" novalidate>
+      <div
+        class="modal fade"
+        id="pupilModal"
+        tabindex="-1"
+        aria-labelledby="pupilModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="pupilModalLabel">
+                O'quvchining ma'lumotlari
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="col-12 mb-3">
+                <label for="firstName" class="form-label"
+                  >Ismini kiriting:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="Ism"
+                  required
+                />
+                <div class="valid-feedback">Rahmat to'ldirganingiz uchun !</div>
+                <div class="invalid-feedback">Iltimos to'ldiring</div>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="lastName" class="form-label"
+                  >Familiyangizni kiriting:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Familiya"
+                  required
+                />
+                <div class="valid-feedback">Rahmat to'ldirganingiz uchun !</div>
+                <div class="invalid-feedback">Iltimos to'ldiring !</div>
+              </div>
+
+              <div class="col-12 mb-3">
+                <label for="addressName" class="form-label">Manzil:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="addressName"
+                  placeholder="Manzil"
+                  required
+                />
+                <div class="valid-feedback">Rahmat to'ldirganingiz uchun !</div>
+                <div class="invalid-feedback">Iltimos to'ldiring !</div>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="pupilBirth" class="form-label"
+                  >Tug'ilgan oy</label
+                >
+                <select class="form-select" id="pupilBirth" required>vfdb</select>
+                <div class="valid-feedback">Rahmat to'ldirganingiz uchun !</div>
+              </div>
+              <div class="col-12 mb-3">
+                <label for="pupilLevel" class="form-label"
+                  >lavozimi</label
+                >
+                <select class="form-select" id="pupilLevel" required>vfdb</select>
+                <div class="valid-feedback">Rahmat to'ldirganingiz uchun !</div>
+              </div>
+              <div class="col-12 mb-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="pupilCheckWork"
+                  />
+                  <label class="form-check-label" for="pupilCheckWork">
+                    Ishlaydimi ?
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Yopish
+              </button>
+              <button type="submit" class="btn btn-success" id="sendBtn">
+                Qo'shish
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form action=""></form>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
